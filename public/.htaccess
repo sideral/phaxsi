@@ -1,0 +1,13 @@
+
+<IfModule mod_deflate>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml
+    AddOutputFilterByType DEFLATE text/css application/javascript
+</IfModule>
+
+<IfModule mod_expires>
+    ExpiresActive Off
+    ExpiresByType application/javascript A259200
+    ExpiresByType text/css A259200
+    ExpiresByType image/png A3592000
+    ExpiresByType image/jpeg A3592000
+</IfModule>

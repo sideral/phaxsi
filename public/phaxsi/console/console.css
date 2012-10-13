@@ -1,0 +1,128 @@
+#phaxsi-trace TABLE{
+	width:940px;
+	margin:20px auto;
+	border:solid #000 1px;
+	background:#fff;
+	font-size:13px;
+	font-family:monospace;
+	clear:both;
+	color:#000;
+	text-align:left;
+	border-collapse: collapse;
+}
+
+#phaxsi-trace tfoot TD{
+	font-weight:bold;
+	background-color:#ddd;
+	padding:5px;
+	text-align:center;
+}
+
+#phaxsi-trace  TR{
+	font-size:13px;
+}
+
+#phaxsi-trace  TH{
+	padding:3px 10px;
+	font-weight:bold;
+	background-color:#ddd;
+	padding:5px;
+}
+
+#phaxsi-trace  TH.controller{
+	width:140px;
+}
+
+#phaxsi-trace  TD{
+	padding:2px 10px;
+	font-family:monospace;
+	border-top:solid 1px #ddd;
+}
+
+#phaxsi-trace  .duration{
+	text-align:right;
+	width:80px;
+}
+
+#phaxsi-trace TR:hover{
+	background-color:#eee;
+}
+
+#phaxsi-trace TR.important{
+	background:#C3FDB8;
+}
+
+#phaxsi-trace TR.important:hover{
+	background:#B2ECA7;
+}
+
+#phaxsi-trace TR.info{
+	color:#000;
+}
+
+#phaxsi-trace TR.no-important{
+	color:#888;
+}
+
+#phaxsi-trace TR.no-important:hover{
+	color:#000;
+}
+
+#phaxsi-trace TR.redirect{
+	background:#ddd;
+	padding:5px;
+	font-weight: bold;
+}	
+
+#phaxsi-trace TR.warning{
+	background:#F4FA58;
+}
+
+#phaxsi-trace TR.warning:hover{
+	background:#E3E947;
+}
+
+#phaxsi-trace TR.notice{
+	background:#E0ECF8;
+}
+
+#phaxsi-trace TR.notice:hover{
+	background:#CFDBE7;
+}
+
+
+
+#phaxsi-trace TR.backtrace{
+	color:#666699;
+}
+
+#phaxsi-trace TR.backtrace:hover{
+	color:#000;
+}
+
+#phaxsi-trace TR.error, .console-error{
+	color:#fff;
+	background:#B40404;
+	font-weight:bold;
+}
+
+#phaxsi-trace TR.error:hover{
+	background:#A30000;
+}
+
+#phaxsi-trace PRE{
+	background:none;border:none;padding:0;margin:0;
+}
+
+#phaxsi-opener{text-align:left;font-size:12px;background:#fff;color:#B40404}
+
+#phaxsi-opener .view-details{
+	background:#B40404;
+	color:#fff;
+	text-decoration:underline;
+	text-align: left;
+}
+
+#phaxsi-opener .view-details:hover{
+	background:red;
+}
