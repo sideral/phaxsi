@@ -1,6 +1,3 @@
-phaxsi
-======
-
 What is Phaxsi PHP Framework?
 =============================
 
