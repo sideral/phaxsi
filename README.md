@@ -9,7 +9,7 @@ Phaxsi is a modern PHP framework built from the ground up with simplicity and co
 Main Features
 =============
   
-*Model-View-Controller*
+**Model-View-Controller**
 MVC architecture forces separation of logic, presentation and data. 
 
 *SQL Query Builder*
