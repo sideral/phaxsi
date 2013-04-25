@@ -59,11 +59,11 @@ With blocks, it is possible to create isolated widgets that can be used accross 
 
 **Layouts**
 
-Layouts are those parts of the page that don't change much, like, for example, the header and the footer. You can put this code in just one part and Orange will bring the pieces together.
+Layouts are those parts of the page that don't change much, like, for example, the header and the footer. You can put this code in just one part and Phaxsi will bring the pieces together.
 
 **Shell Scripting**
 
-Orange supports shell scripting out of the box, providing its organization and power to shell scripts.
+Phaxsi supports shell scripting out of the box, providing its organization and power to shell scripts.
 
 Primary Design Goals
 ====================
@@ -80,5 +80,5 @@ To this end, the framework is organized in modules where the code of each one ca
 
 **High Performance**
 
-The framework architecture is extremely lightweight. Loosely coupled components are put together to make this possible. As a result, Orange features an ideal performance for intermediate to big websites.
+The framework architecture is extremely lightweight. Loosely coupled components are put together to make this possible. As a result, Phaxsi features an ideal performance for intermediate to big websites.
 
