@@ -4,12 +4,12 @@
  * Base class for building queries.
  * 
  * Phaxsi PHP Framework (http://phaxsi.net)
- * Copyright 2008-2012, Alejandro Zuleta (http://slopeone.net)
+ * Copyright 2008-2013, Alejandro Zuleta (http://slopeone.net)
  *
  * Licensed under The MIT License
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright 2008-2012, Alejandro Zuleta (http://slopeone.net)
+ * @copyright     Copyright 2008-2013, Alejandro Zuleta (http://slopeone.net)
  * @link          http://phaxsi.net Phaxsi PHP Framework
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  * @package       Phaxsi.Database.QueryBuilder
@@ -87,11 +87,16 @@ abstract class TableQueryBuilder extends DataSource{
 				$row_name = "`$table_name`.`{$condition[0]}`";
 			}
 			else{
-				if(!is_array($condition[0][1]))
-					$args = $condition[0][1];
-				else
+				if(!is_array($condition[0][1])){
+					$args = "`$table_name`.`{$condition[0][1]}`";
+				}
+				else{
+					foreach($condition[0][1] as &$field_condition){
+						$field_condition = "`$table_name`.`$field_condition`";
+					}
 					$args = implode(',', $condition[0][1]);
-
+				}
+				
 				$row_name = $condition[0][0] . '(' . $args . ')';
 			}
 
@@ -100,6 +105,9 @@ abstract class TableQueryBuilder extends DataSource{
 			}
 			else if(!is_array($condition[2])){
 				$value = $this->quote($condition[2]);
+				if(strtoupper($condition[1]) == 'AGAINST'){
+					$value = "($value)";
+				}
 				$conditions[] = "$row_name {$condition[1]} $value";
 			}
 			else if(strtoupper($condition[1]) == 'IN'){
@@ -116,6 +124,14 @@ abstract class TableQueryBuilder extends DataSource{
 			}
 		}
 		return $conditions;
+	}
+	
+	function whereMatch($fields, $value = null){
+		if(!is_array($fields)){
+			$fields = array($fields);
+		}
+		$this->where_fields[] = array(array('MATCH',$fields), 'AGAINST', $value);
+		return $this;
 	}
 
 }
