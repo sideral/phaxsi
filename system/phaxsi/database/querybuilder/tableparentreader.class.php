@@ -3,13 +3,13 @@
 /**
  * Allows to move the 'cursor' to the parent table in a built query.
  * 
- * Phaxsi PHP Framework (http://phaxsi.net)
- * Copyright 2008-2012, Alejandro Zuleta (http://slopeone.net)
+
+ * Copyright 2008-2012, Alejandro Zuleta (http://phplab.co)
  *
  * Licensed under The MIT License
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright 2008-2012, Alejandro Zuleta (http://slopeone.net)
+ * @copyright     Copyright 2008-2012, Alejandro Zuleta (http://phplab.co)
  * @link          http://phaxsi.net Phaxsi PHP Framework
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  * @package       Phaxsi.Database.QueryBuilder
