@@ -105,10 +105,44 @@ class AppConfig{
 	
 	const CUSTOM_ROUTER = 'phaxsi';
 	
+	/**
+	 * This array contains pairs of patterns => replacements for urls.
+	 * 
+	 * For instance, if you want all requests to '/blog/345' to become '/blog/posts/345', then you 
+	 * should add the map
+	 * 
+	 * 'blog/[0-9]+' => 'blog/posts/$0'
+	 * 
+	 * in which the key is a regular expression and the second is a string used for replacement 
+	 * compatible with preg_match function.
+	 * 
+	 * @var array
+	 */
 	static $url_map = array();
 	
 	/**
 	 * An array with validation expressions for the url parts. Leave blank for defaults.
+	 * 
+	 * This is used to validate the characters that are introduced in the url. For instance, you
+	 * might not want to have hyphens (-) in the arguments of your site. The default regex for
+	 * args is: /[a-z0-9_-]+(?:/[a-z0-9_-]+)* /. This expression accepts alphanumeric strings with 
+	 * hyphens and underscores as valid argumenets. To disallow hyphens, You can change the default
+	 * url by setting: 
+	 * 
+	 * $url_regexp = array(
+	 *		'args' => '[a-z0-9_]+(?:/[a-z0-9_]+)*'
+	 * );
+	 * 
+	 * Notice that we removed the hyphen from the expression. We also used the special key 'args'.
+	 * 
+	 * The keys that can be used are:
+	 * 
+	 * 'module': The url part that represents the module.
+	 * 'action': The url part that represents the action.
+	 * 'args': The url part that represents the arguments.
+	 * 
+	 * @see \Context for an extended explanation of these parts.
+	 * 
 	 * @var array 
 	 */
 	static $url_regexp = array();

@@ -4,13 +4,12 @@
  * This class is the 'glue' of Phaxsi. Gives coherence to modules by providing a module 
  * context to all classes that use it.
  * 
-
- * Copyright 2008-2012, Alejandro Zuleta (http://phplab.co)
+ * Copyright 2008-2014, Alejandro Zuleta (http://phplab.co)
  *
  * Licensed under The MIT License
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright 2008-2012, Alejandro Zuleta (http://phplab.co)
+ * @copyright     Copyright 2008-2014, Alejandro Zuleta (http://phplab.co)
  * @link          http://phaxsi.net Phaxsi PHP Framework
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  * @package       Phaxsi.Core
