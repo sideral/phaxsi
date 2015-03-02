@@ -37,7 +37,9 @@ class HtmlView extends View{
 	 * @return string The final html generated
 	 */
 	public function render(){
-
+                //Set correct charset
+                header('Content-Type:text/html; charset='.  strtoupper(AppConfig::CHARSET));
+            
 		if($this->cache && $this->cache->isHit()){
 			if($_htmlview_contents = $this->cache->getContents()){
 				return $_htmlview_contents;
