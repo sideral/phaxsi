@@ -1,5 +1,5 @@
 
-## ** IMPORTANT: ** This project is not actively mantained. **
+## IMPORTANT: This project is not actively mantained. **
 
 What is Phaxsi PHP Framework?
 =============================
